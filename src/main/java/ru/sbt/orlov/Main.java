@@ -34,10 +34,10 @@ public class Main {
         try (Connection connection = getConnection("jdbc:h2:~/test", "sa", "")) {
             try {
                 createTables(connection);
-                randomDataGenerator(connection);
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
+            randomDataGenerator(connection);
         }
     }
 
